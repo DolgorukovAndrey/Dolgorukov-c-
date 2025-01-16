@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <windows.h>
 using namespace std;
 void massiv(vector <long int>& a, string s, int len, int part)
 {
@@ -58,18 +57,17 @@ string factorial(string s1, string s2) //ymnojenie stolbikom
 }
 int main()
 {
-	SetConsoleOutputCP(1251);
 	int n;
-	cout << "Для подсчёта суммы 1! + 2! + 3! + ... + n!" << endl;
+	cout << "To calculate the amount 1! + 2! + 3! + ... + n!" << endl;
 	int pr = 0;
 	while (pr == 0) {
 		while (true) // proverka na vvod n
 		{
-			cout << "Введите n: ";
+			cout << "Enter n: ";
 			cin >> n;
 			if (!cin)
 			{
-				cout << "Не верно введено число, введите заново: \n";
+				cout << "The number is incorrect, please enter it again: \n";
 				cin.clear();
 				while (cin.get() != '\n');
 			}
@@ -77,11 +75,11 @@ int main()
 		}
 		while (cin.get() != '\n')
 			cin.clear();
-		cout << "Вы хотите подсчитать сумма для n = " << n << "? (Если нет введите 0, иначе введите 1)" << endl;
+		cout << "You want to calculate the amount for n = " << n << "? (If not, enter 0, else 1)" << endl;
 		while (true) { //proverka na pravilnost vvoda
 			cin >> pr;
 			if (!cin) {
-				cout << "Введите корректный ответ (Если не хотите считать введите 0б иначе - 1): ";
+				cout << "Enter the correct answer (If not, enter 0, else 1): ";
 				cin.clear();
 				while (cin.get() != '\n');
 			}
@@ -131,5 +129,5 @@ int main()
 		s.erase(0, s.find_first_not_of('0'));
 		j++;
 	}
-	cout << "Сумма факториалов равна: " << s;	
+	cout << "The sum of the factorials is: " << s;	
 }
