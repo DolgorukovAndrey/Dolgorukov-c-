@@ -5,11 +5,11 @@ using namespace std;
 int proverka(int n) {
 	while (true) // proverka na vvod n
 	{
-		cout << "Enter n: ";
+		cout << "Enter: ";
 		cin >> n;
 		if (!cin)
 		{
-			cout << "The number is incorrect, please enter it again: \n";
+			cout << "Input is incorrect, please enter it again: \n";
 			cin.clear();
 			while (cin.get() != '\n');
 		}
@@ -83,19 +83,19 @@ int main()
 			n = proverka(n);
 			while (cin.get() != '\n')
 				cin.clear();
-			cout << "You want to calculate the amount for n = " << n << "? (If not, enter 0, else 1)" << endl;
+			cout << "You want to calculate the amount for n = " << n << "? (If you want to select another number, enter 0, else - any number)" << endl;
 			pr = proverka(pr);
 		}
 		if (n < 0) {
 			cout << "It is impossible to calculate" << endl;;
-			cout << "If you want to calculate another amount, enter 1, else 0: ";
+			cout << "To exit the program enter 0 ,else - any number : ";
 			exit = proverka(exit);
 		}
 		else {
 			if (n == 0) {
 				s = to_string(1);
 				cout << "The sum of the factorials is: " << s << endl;
-				cout << "If you want to calculate another amount, enter 1, else 0: ";
+				cout << "To exit the program enter 0, else - any number: ";
 				exit = proverka(exit);
 			}
 			else {
@@ -134,7 +134,7 @@ int main()
 					s.erase(0, s.find_first_not_of('0'));
 				}
 				cout << "The sum of the factorials is: " << s << endl;
-				cout << "If you want to calculate another amount, enter 1, else 0: ";
+				cout << "To exit the program enter 0, else - any number: ";
 				exit = proverka(exit);
 			}
 		}
